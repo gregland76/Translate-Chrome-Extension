@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Translate FR↔EN",
+  "version": "1.0.0",
+  "description": "Sélectionnez du texte, clic droit → Traduire FR↔EN. La traduction est copiée dans le presse-papiers. L'icône affiche le drapeau de la langue détectée.",
+
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "clipboardWrite"
+  ],
+
+  "host_permissions": [
+    "https://translate.googleapis.com/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Translate FR↔EN — Cliquez pour traduire la sélection"
+  },
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

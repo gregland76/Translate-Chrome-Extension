@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Translate FR↔EN</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <span class="logo">🇫🇷 ↔ 🇬🇧</span>
+      <div>
+        <h1>Translate FR↔EN</h1>
+        <p class="subtitle">Sélection → Clic droit → Presse-papiers</p>
+      </div>
+    </header>
+
+    <section class="how-to">
+      <ol>
+        <li>Sélectionnez du texte sur n'importe quelle page</li>
+        <li>Faites un <strong>clic droit</strong> sur la sélection</li>
+        <li>Cliquez sur <strong>« Traduire FR↔EN »</strong></li>
+        <li>La traduction est copiée dans le <strong>presse-papiers</strong></li>
+      </ol>
+    </section>
+
+    <section id="last-block" class="last-block hidden">
+      <h2>Dernière traduction</h2>
+      <div class="card">
+        <div class="card-header" id="card-header"></div>
+        <div class="card-original" id="card-original"></div>
+        <div class="card-arrow">↓</div>
+        <div class="card-translated" id="card-translated"></div>
+        <div class="card-time" id="card-time"></div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <span>Propulsé par Google Translate</span>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
